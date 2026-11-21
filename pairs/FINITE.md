@@ -20,7 +20,7 @@ c_n=\frac{1}{n^2}\sum_{m\ne j}b_mb_jW(m/n^2)W(j/n^2)
 C_K=\sum_{n=K}^{K^2}c_n .
 $$
 
-**Theorem.** For every integer $2\le K\le1\,200\,000\,000\,000$, every $c_n$ on $[K,K^2]$ is strictly negative. In particular $C_K<0$. More generally, let $H\ge H_0=3\cdot10^{12}$ and suppose that all nontrivial zeta zeros of positive ordinate at most $H$ lie on the critical line. For $n\ge2$ the same strict inequality holds whenever $4096 n^2/\log(n^2)\le H^4$. Platt and Trudgian proved the height hypothesis for $H_0$. [Finite zero verification](https://arxiv.org/abs/2004.09765)
+**Theorem.** For every integer $`2\le K\le1\,200\,000\,000\,000`$, every $c_n$ on $[K,K^2]$ is strictly negative. In particular $C_K<0$. More generally, let $H\ge H_0=3\cdot10^{12}$ and suppose that all nontrivial zeta zeros of positive ordinate at most $H$ lie on the critical line. For $n\ge2$ the same strict inequality holds whenever $4096 n^2/\log(n^2)\le H^4$. Platt and Trudgian proved the height hypothesis for $H_0$. [Finite zero verification](https://arxiv.org/abs/2004.09765)
 
 ## The smoothed estimate
 
@@ -39,24 +39,24 @@ Indeed the low zero coefficients $C(\rho)$ are positive on the critical line, ha
 
 ## Moving back to the original tent
 
-As a function of $x$, $m W(m/x)=(x-m)_+-(3/2)(x-2m)_++(1/2)(x-4m)_+$. Each mean hinge increment $\mathbb E(xU-a)_+-(x-a)_+$ is nonnegative by convexity. For $h=x(U-1)$ subtract $h\mathbf1_{x>a}$ from the displacement at fixed $h$ before averaging. The remainder is bounded by the integral from $0$ to $|h|$ of the indicator that $a$ is between $x$ and $x+\operatorname{sgn}(h)t$, endpoints included. For the hinge at $km$ this requires $1/m\le ke^{2d}/x$. At time $t$, eligible integers occupy an interval of length $t/k$. Both groups of coefficients, the positive one at $k=1,4$ and the absolute negative one at $k=2$, have $\sum|a_k|=3/2$ and $\sum k|a_k|=3$. Thus bounding either side costs the same.
+As a function of $x$, $`m W(m/x)=(x-m)_+-(3/2)(x-2m)_++(1/2)(x-4m)_+`$. Each mean hinge increment $`\mathbb E(xU-a)_+-(x-a)_+`$ is nonnegative by convexity. For $`h=x(U-1)`$ subtract $`h\mathbf1_{x>a}`$ from the displacement at fixed $h$ before averaging. The remainder is bounded by the integral from $0$ to $|h|$ of the indicator that $a$ is between $x$ and $x+\operatorname{sgn}(h)t$, endpoints included. For the hinge at $km$ this requires $1/m\le ke^{2d}/x$. At time $t$, eligible integers occupy an interval of length $t/k$. Both groups of coefficients, the positive one at $k=1,4$ and the absolute negative one at $k=2$, have $\sum|a_k|=3/2$ and $\sum k|a_k|=3$. Thus bounding either side costs the same.
 
 First allow every integer at weight at most $L+d$. There are at most $t/k+1$ crossings. Integrating in $t$ and using $\mathbb E h^2=x^2\nu$, $\mathbb E|h|\le x\sqrt\nu$ proves
 
 $$
 \frac{|D(x)-\mathbb ED(xU)|}{\sqrt x}
-\le e^{2d}(L+d)\left(\frac34\sqrt x\,\nu+3\sqrt\nu\right). \tag{2}
+\le e^{2d}(L+d)\left(\frac34\sqrt x\thinspace{}\nu+3\sqrt\nu\right). \tag{2}
 $$
 
-For $x\ge10^{42}$ use the following sharper bound. For ordinary primes pad the crossing interval to a left-open interval of length $Y=t/k+x^{2/3}+1$, starting one unit to the left. Brun–Titchmarsh for modulus one bounds the mass by $2Y(L+d)/\log Y\le3.001Y$ since $\log Y\ge2L/3$. Higher powers can be treated before taking the expectation. The Lipschitz bound for $W(m/x)$ as a function of $x$ is $1/m$. A term that can change has $xe^{-2d}/4\le m\le xe^d$, and $\sum_{p^j\le z,\,j\ge2}\log p\le \sqrt z(\log z)^2/\log2$. Together these give
+For $x\ge10^{42}$ use the following sharper bound. For ordinary primes pad the crossing interval to a left-open interval of length $Y=t/k+x^{2/3}+1$, starting one unit to the left. Brun–Titchmarsh for modulus one bounds the mass by $2Y(L+d)/\log Y\le3.001Y$ since $\log Y\ge2L/3$. Higher powers can be treated before taking the expectation. The Lipschitz bound for $W(m/x)$ as a function of $x$ is $1/m$. A term that can change has $xe^{-2d}/4\le m\le xe^d$, and $`\sum_{p^j\le z,\,j\ge2}\log p\le \sqrt z(\log z)^2/\log2`$. Together these give
 
 $$
 \begin{split}
 \frac{|D(x)-\mathbb ED(xU)|}{\sqrt x}
-&\le 3.001e^{2d}\left(\frac34\sqrt x\,\nu+
+&\le 3.001e^{2d}\left(\frac34\sqrt x\thinspace{}\nu+
                 3(x^{1/6}+x^{-1/2})\sqrt\nu\right)\\
-&\quad+\frac{4e^{5d/2}(L+d)^2}{\log2}\sqrt\nu . \tag{3}
-\end{split}
+&\quad+\frac{4e^{5d/2}(L+d)^2}{\log2}\sqrt\nu .
+\end{split}\tag{3}
 $$
 
 The linear centering term cancels in both (2) and (3). [Montgomery and Vaughan, Theorem 2](https://doi.org/10.1112/S0025579300004708)
@@ -65,7 +65,7 @@ The linear centering term cancels in both (2) and (3). [Montgomery and Vaughan, 
 
 The even integers have $b_m=-1$ except at powers of two. Comparing the even lattice with the integral of $W^2$ costs at most two. There are at most three powers of two on $[x/4,x]$, each with $W^2\le1$. Hence $A(x)/x\ge I/2-5/x$.
 
-For $x\ge10^{42}$ retain only ordinary primes. On the support, $(\log p-1)^2\ge (L-\log4-2)\log p$. Integration by parts against $\vartheta(t)-t$, using total variation two for $W^2$ and Dusart's bound $|\vartheta(t)-t|\le0.2t/\log^2t$ for $t>3\,594\,641$, gives
+For $x\ge10^{42}$ retain only ordinary primes. On the support, $(\log p-1)^2\ge (L-\log4-2)\log p$. Integration by parts against $\vartheta(t)-t$, using total variation two for $W^2$ and Dusart's bound $|\vartheta(t)-t|\le0.2t/\log^2t$ for $`t>3\,594\,641`$, gives
 
 $$
 \frac{A(x)}{xL}\ge
@@ -82,7 +82,7 @@ For $32^2\le x\le10^{42}$ evaluate (1) and (2) with $H=H_0$, the upper endpoint 
 | $32^2\le x\le10^{42}$ | $\lvert S(x)\rvert/\sqrt x<0.293$ | $A(x)/x>0.108$ |
 | $10^{42}\le x,\ 4096x/L\le H^4$ | $\lvert S(x)\rvert/\sqrt{xL}<0.441$ | $A(x)/(xL)>0.219$ |
 
-The first row gives $S^2<A$. In the second row the weaker cutoffs $0.45$ and $0.21$ already give $(S^2-A)/x<-(3/400)\log x$. For $2\le n<32$, interval arithmetic on the exact prime powers gives $c_n<0$ in every case. Finally $x/\log x$ is increasing for $x\ge4$. At $K_*=1\,200\,000\,000\,000$, $4096K_*^4/(\log(K_*^4)H_0^4)<0.943$. All $x=n^2\le K_*^4$ are covered.
+The first row gives $S^2<A$. In the second row the weaker cutoffs $0.45$ and $0.21$ already give $(S^2-A)/x<-(3/400)\log x$. For $2\le n<32$, interval arithmetic on the exact prime powers gives $c_n<0$ in every case. Finally $x/\log x$ is increasing for $x\ge4$. At $`K_*=1\,200\,000\,000\,000`$, $`4096K_*^4/(\log(K_*^4)H_0^4)<0.943`$. All $`x=n^2\le K_*^4`$ are covered.
 
 The certificate replays the endpoint and interval estimates at either 160 or 256 bits. Direct ordered-pair enumeration also checks the diagonal subtraction at $2\le n\le8$. [Interval certificate](check_pairs.py)
 
