@@ -9,11 +9,11 @@ c_n=\frac{1}{n^2}\sum_{m\ne j} b_mb_jW(m/n^2)W(j/n^2),\qquad
 C_K=\sum_{K\le n\le K^2}c_n.
 $$
 
-Both orders of each unequal pair count. The requested arithmetic proof of $C_K\le0$ on arbitrarily late whole blocks remains missing. The published RH theorem implies the sign on every sufficiently large block by the tent's absolutely convergent explicit formula.
+Both orders of each unequal pair count. Under RH, the tent’s absolutely convergent explicit formula gives $C_K<0$ on every sufficiently late whole block. An arithmetic proof of $C_K\le0$ on an unbounded sequence of whole blocks remains open.
 
 | Result obtained without assuming RH | Where to find the proof |
 | --- | --- |
-| Every individual $c_n$ is strictly negative on every block with $2\le K\le1\,200\,000\,000\,000$. A hypothetical first failure forces an off-line zero within an explicit height and real-part range. | [Finite bounds](FINITE.md) |
+| Every individual $c_n$ is strictly negative on every block with $`2\le K\le1\,200\,000\,000\,000`$. A hypothetical first failure forces an off-line zero within an explicit height and real-part range. | [Finite bounds](FINITE.md) |
 | Every sufficiently late $[B,4B\sqrt{\log B}]$ contains a run of at least $\lfloor\exp((\log B)^{3/5}/(5(\log\log B)^{1/5}))\rfloor$ consecutive negative $c_n$. | [Theta identity and runs](THETA.md) |
 | Nonpositivity of the sum on arbitrarily late $[B,4B\sqrt{\log B}]$ is itself equivalent to RH. A filter for any one zero proves the converse directly, including for a zero of higher multiplicity. | [Short-block criterion](SHORT-BLOCKS.md) |
 
@@ -32,7 +32,7 @@ The three certificates ran with CPython 3.12.14 and python-flint 0.9.0 at 160 an
 | Large finite range | Centered ratio $<0.441$, normalized diagonal $>0.219$. Endpoint height ratio $<0.943$. |
 | Two arithmetic expressions for the theta sum | Enclosures overlap at $x=8,16,32,64$. |
 | Three explicit dilations of the theta weight | Certified squared approximation error below $0.00410$ of the squared tent norm. |
-| First-zero filter | The modulus of the unnormalized residue lies between $0.0000275384$ and $0.0000275385$. The divisor-side integral differs from it by less than $2.75\%$ at $X=128$. |
+| First-zero filter | The modulus of the unnormalized residue lies between $0.0000275384$ and $0.0000275385$. The divisor-side integral differs from it by less than $`2.75\%`$ at $X=128$. |
 
 For the last check the arithmetic quantity compared with the residue is $\int_0^X S_G(t)t^{-\rho-1}dt$. The program integrates each of the three Gaussians by the upper incomplete gamma function, bounds the omitted integer tail and uses a separately evaluated $\zeta'(\rho)$ for the residue. The finite examples test signs and normalizations. The asymptotic and its use on all late blocks follow from the proof.
 
@@ -63,4 +63,4 @@ Büthe transfers finite zero verification to explicit bounds for prime counts. C
 
 The positive theta kernel for $\xi$ is classical. Convolution methods for mean-periodic functions associated to zeta functions are established. Pintz, Schlage-Puchta and Révész studied localization of prime-number-theorem oscillations from individual zeros, including effective tradeoffs between the size and the localization. Kaczorowski studied local sign changes for classical prime remainders. The Montgomery–Vorhauer factor $2.02$ for $\psi(x)-x$ assumes RH. The earlier 547/727 calculation uses a selected Dirichlet zero, compact averages and a different prime-ideal score. [Rodgers and Tao, equations (1)–(3)](https://arxiv.org/pdf/1801.05914) · [Fesenko, Ricotta and Suzuki](https://arxiv.org/abs/0803.2821) · [Schlage-Puchta, including Pintz's theorem](https://arxiv.org/pdf/1912.00853) · [Révész](https://arxiv.org/abs/2202.01837) · [Kaczorowski](https://matwbn.icm.edu.pl/ksiazki/aa/aa45/aa4517.pdf) · [Montgomery and Vorhauer](https://doi.org/10.7169/facm/1229442626) · [547/727 result](https://github.com/leecrossley/theta-race-waiting-bound/blob/9193ef9459374da9f68156ad6a1aa8db088882b0/PROOF.md)
 
-Searches for the centered dyadic tent, finite-height bounds, squared prime sums on integer powers, and localization by the completed zeta function found no earlier statement of the explicit finite pair bound, the quantitative negative runs for this statistic, or this pair criterion on $[B,4B\sqrt{\log B}]$. This is a bounded literature search. Absolute priority and independent peer review remain outstanding. The narrower criterion is a new candidate formulation. Its truth as a consequence of the published RH theorem provides no independent arithmetic proof of the requested sign. [Verification of the published RH proof](https://math.mit.edu/~drew/grh/)
+The literature search covered the centred dyadic tent, finite-height bounds, squared prime sums on integer powers and localisation using the completed zeta function. It found no earlier statement of the explicit finite pair bound, the quantitative negative runs for this statistic or the short-block pair criterion. The whole-block sign follows under RH. Alpöge announced a Lean proof of RH on 20 November 2026, and Sutherland records the independent checks of that formal proof. [Alpöge’s announcement](https://alpo.ge/remark.pdf) [Sutherland’s verification record](https://math.mit.edu/~drew/grh/)

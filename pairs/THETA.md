@@ -25,8 +25,7 @@ g(t)=e^{-\pi t^2}-3e^{-4\pi t^2}+2e^{-16\pi t^2},\qquad
 G(t)=F(t)-3F(2t)+2F(4t)=\sum_{k\ge1}g(kt).
 $$
 
-The theta transformation gives $G(t)=(2t)^{-1}G(1/(4t))$. Splitting off the even indices also gives
-$G(t)=\sum_{k\ {\rm odd},\,k>0}(e^{-\pi k^2t^2}-2e^{-4\pi k^2t^2})$. For $t\ge1/2$ each summand is positive. Reciprocity gives positivity for smaller $t$. The function and its derivatives decrease faster than any power at both ends, with the corresponding change of variable at zero.
+The theta transformation gives $G(t)=(2t)^{-1}G(1/(4t))$. Splitting off the even indices also gives $`G(t)=\sum_{k\ {\rm odd},\,k>0}(e^{-\pi k^2t^2}-2e^{-4\pi k^2t^2})`$. For $t\ge1/2$ each summand is positive. Reciprocity gives positivity for smaller $t$. The function and its derivatives decrease faster than any power at both ends, with the corresponding change of variable at zero.
 
 For a weight $U$, set $S_U(x)=\sum_{m\ge1}(\Lambda(m)-1)U(m/x)$. Because $\sum_{m\mid h}\Lambda(m)=\log h$ and $\sum_{m\mid h}1=\tau(h)$, absolute convergence at each fixed $x>0$ gives the exact identity
 
@@ -34,7 +33,7 @@ $$
 S_G(x)=\sum_{h\ge1}(\log h-\tau(h))g(h/x). \tag{1}
 $$
 
-Write $\widehat f(s)=\int_0^\infty f(t)t^{s-1}\,dt$ and $P(s)=(1-2^{-s})(1-2^{1-s})$. Then $\widehat g(s)=\tfrac12\pi^{-s/2}\Gamma(s/2)P(s)$ for $\Re s>0$. Mellin inversion of (1) on $\Re s=2$ has integrand $x^s\widehat g(s)(-\zeta'(s)-\zeta(s)^2)$. At $s=1$ the double poles cancel, and $P$ cancels the remaining simple pole. At $s=0$ the zero of $P$ removes the gamma pole. Move to $\Re s=-5$, crossing the simple gamma poles at $-2$ and $-4$. Polynomial growth of $\zeta,\zeta'$ on bounded vertical strips and exponential decay of $\Gamma$ justify the contour shift. The residue coefficient at $-2$ is $21\pi\zeta'(-2)=-21\zeta(3)/(4\pi)$, by the functional equation. Thus
+Write $`\widehat f(s)=\int_0^\infty f(t)t^{s-1}\,dt`$ and $P(s)=(1-2^{-s})(1-2^{1-s})$. Then $\widehat g(s)=\tfrac12\pi^{-s/2}\Gamma(s/2)P(s)$ for $\Re s>0$. Mellin inversion of (1) on $\Re s=2$ has integrand $x^s\widehat g(s)(-\zeta'(s)-\zeta(s)^2)$. At $s=1$ the double poles cancel, and $P$ cancels the remaining simple pole. At $s=0$ the zero of $P$ removes the gamma pole. Move to $\Re s=-5$, crossing the simple gamma poles at $-2$ and $-4$. Polynomial growth of $\zeta,\zeta'$ on bounded vertical strips and exponential decay of $\Gamma$ justify the contour shift. The residue coefficient at $-2$ is $21\pi\zeta'(-2)=-21\zeta(3)/(4\pi)$, by the functional equation. Thus
 
 $$
 S_G(x)=-\frac{21\zeta(3)}{4\pi}x^{-2}+O(x^{-4}). \tag{2}
@@ -54,12 +53,12 @@ $$
 \Phi(u)=\sum_{k\ge1}\bigl(2\pi^2 k^4e^{9u}-3\pi k^2e^{5u}\bigr)e^{-\pi k^2e^{4u}}.
 $$
 
-Its terms are positive for $u\ge0$. Rodgers and Tao record the classical representation $\xi(1/2+iz/2)/8=\int_0^\infty\Phi(u)\cos(zu)\,du$ and the evenness of $\Phi$. Let $k(v)=\Phi(v/2)/\int_{\mathbb R}\Phi(w/2)\,dw$. This is a positive probability density with bilateral transform $\int_{\mathbb R}e^{(s-1/2)v}k(v)\,dv=\xi(s)/\xi(1/2)$. For $|v|$ large, $e^{|v|/2}k(v)\ll\exp(-2e^{2|v|})$, by the displayed series and evenness. Mellin uniqueness now gives $\int k(v)e^{-v/2}W(t e^{-v})\,dv=G(t)/\xi(1/2)$. [Rodgers and Tao, equations (1)–(3)](https://arxiv.org/pdf/1801.05914)
+Its terms are positive for $u\ge0$. Rodgers and Tao record the classical representation $`\xi(1/2+iz/2)/8=\int_0^\infty\Phi(u)\cos(zu)\,du`$ and the evenness of $\Phi$. Let $`k(v)=\Phi(v/2)/\int_{\mathbb R}\Phi(w/2)\,dw`$. This is a positive probability density with bilateral transform $`\int_{\mathbb R}e^{(s-1/2)v}k(v)\,dv=\xi(s)/\xi(1/2)`$. For $|v|$ large, $e^{|v|/2}k(v)\ll\exp(-2e^{2|v|})$, by the displayed series and evenness. Mellin uniqueness now gives $`\int k(v)e^{-v/2}W(t e^{-v})\,dv=G(t)/\xi(1/2)`$. [Rodgers and Tao, equations (1)–(3)](https://arxiv.org/pdf/1801.05914)
 
 In particular, with $f(y)=S_W(y)/\sqrt y$,
 
 $$
-\int_{\mathbb R} k(v) f(Xe^v)\,dv
+\int_{\mathbb R} k(v) f(Xe^v)\thinspace{}dv
    =\frac{S_G(X)}{\xi(1/2)\sqrt X}=O(X^{-5/2}). \tag{3}
 $$
 
@@ -93,15 +92,15 @@ Write $C_K(U)$ for the ordered unequal-pair sum with weight $U$ in both variable
 
 $$
 \sum_{K\le n\le K^2}\frac1{n^2}\sum_m b_m^2 U(m/n^2)^2
-  =(4\|U\|_2^2+o(1))K^2\log K.
+  =(4\Vert{}U\Vert{}_2^2+o(1))K^2\log K.
 $$
 
-Here $\|U\|_2^2=\int_0^\infty U(t)^2\,dt$. First integrate on a fixed compact interval, then bound both tails by dyadic summation with $\sum_{m\le t}b_m^2\ll t\log(2t)$. The factor four comes from $\sum_{K\le n\le K^2}\log(n^2)\sim4K^2\log K$. In particular (2) gives $C_K(G)\sim-4\|G\|_2^2K^2\log K$ on every sufficiently late whole block for the theta weight.
+Here $`\|U\|_2^2=\int_0^\infty U(t)^2\,dt`$. First integrate on a fixed compact interval, then bound both tails by dyadic summation with $`\sum_{m\le t}b_m^2\ll t\log(2t)`$. The factor four comes from $\sum_{K\le n\le K^2}\log(n^2)\sim4K^2\log K$. In particular (2) gives $`C_K(G)\sim-4\|G\|_2^2K^2\log K`$ on every sufficiently late whole block for the theta weight.
 
 Let $V(t)=\sum_{j=1}^d a_jG(r_jt)$ for any fixed real coefficients and fixed positive dilations. Then $S_V(x)=O_V(x^{-2})$ by (2). Put $E=W-V$. Since $S_W(x)=O(x)$, the difference between the two block sums of $S_W(n^2)^2/n^2$ and $S_E(n^2)^2/n^2$ is $O_V(\sum_{n\ge K}n^{-4})$. Consequently
 
 $$
-C_K(W)=C_K(E)-4\bigl(I-\|E\|_2^2\bigr)K^2\log K+o_V(K^2\log K). \tag{5}
+C_K(W)=C_K(E)-4\bigl(I-\Vert{}E\Vert{}_2^2\bigr)K^2\log K+o_V(K^2\log K). \tag{5}
 $$
 
 For an explicit example use
@@ -110,10 +109,10 @@ $$
 V(t)=-\tfrac{19}{16}G(4t/5)+\tfrac{37}{8}G(t)-\tfrac{95}{64}G(5t/4).
 $$
 
-An interval integral gives $\|W-V\|_2^2/I<0.00410$. The certificate sums upper bounds on cells of width $1/4096$ over $[1/16,4]$, and uses reciprocity and Gaussian tails elsewhere. Equation (5) therefore accounts for more than $99.59\%$ of the leading diagonal, while $S_E$ still contains the original centered sum up to $O_V(x^{-2})$. [Interval integral and arithmetic cross-check](check_theta.py)
+An interval integral gives $`\|W-V\|_2^2/I<0.00410`$. The certificate sums upper bounds on cells of width $1/4096$ over $[1/16,4]$, and uses reciprocity and Gaussian tails elsewhere. Equation (5) therefore accounts for more than $`99.59\%`$ of the leading diagonal, while $S_E$ still contains the original centered sum up to $O_V(x^{-2})$. [Interval integral and arithmetic cross-check](check_theta.py)
 
 In fact these dilations span a dense subspace of $L^2((0,\infty),dt)$. Under the unitary map $h(t)\mapsto e^{u/2}h(e^u)$ their span becomes the span of translates. The Fourier transform of the image of $G$ is $\widehat G(1/2+it)$ up to the choice of sign for $t$. This nonzero entire function has only isolated zeros. A function orthogonal to every translate must vanish, since the product of its Fourier transform and the conjugate transform of the image of $G$ is in $L^1$ and has identically zero inverse transform. This proves the density assertion. Thus any fixed fraction below one is possible in (5).
 
-For each nontrivial zero $\rho=\beta+i\gamma$ and each of these finite $V$, however, $\widehat V(\rho)=0$ whereas $\widehat W(\rho)\ne0$. In particular $\int_0^\infty|E(t)|t^{\beta-1}\,dt\ge|\widehat W(\rho)|>0$. Small squared norm of the residual weight therefore leaves an explicit obstruction at each zero. A bound for the residual block energy $\sum S_E(n^2)^2/n^2$ is still required. The mean in (3) selects negative runs of $c_n$ but gives no upper bound for that energy over $[K,K^2]$.
+For each nontrivial zero $\rho=\beta+i\gamma$ and each of these finite $V$, however, $\widehat V(\rho)=0$ whereas $\widehat W(\rho)\ne0$. In particular $`\int_0^\infty|E(t)|t^{\beta-1}\,dt\ge|\widehat W(\rho)|>0`$. Small squared norm of the residual weight therefore leaves an explicit obstruction at each zero. A bound for the residual block energy $\sum S_E(n^2)^2/n^2$ is still required. The mean in (3) selects negative runs of $c_n$ but gives no upper bound for that energy over $[K,K^2]$.
 
-For example, put $f_\rho(y)=y^{\beta-1/2}\cos(\gamma\log y)$. The left side of (3) for this test function is identically zero, by the transform of $k$. If $\beta>1/2$, its squared values on the bases $K^2/2\le n\le K^2$ sum to $\gg_\rho K^{8\beta-2}$. To see this, write $N=K^2$, $n=Nu$. After division by $N^{4\beta-1}$ the sum is a Riemann sum for $\int_{1/2}^1u^{4\beta-2}\cos^2(2\gamma\log u+\phi)\,du$, where $\phi=2\gamma\log N$. The integral has a positive minimum over phases since $\gamma\ne0$, and the Riemann sums converge uniformly in $\phi$ by a uniform derivative bound. This example identifies the information the theta average loses even with exact knowledge of that average at every real scale.
+For example, put $f_\rho(y)=y^{\beta-1/2}\cos(\gamma\log y)$. The left side of (3) for this test function is identically zero, by the transform of $k$. If $\beta>1/2$, its squared values on the bases $K^2/2\le n\le K^2$ sum to $\gg_\rho K^{8\beta-2}$. To see this, write $N=K^2$, $n=Nu$. After division by $N^{4\beta-1}$ the sum is a Riemann sum for $`\int_{1/2}^1u^{4\beta-2}\cos^2(2\gamma\log u+\phi)\,du`$, where $\phi=2\gamma\log N$. The integral has a positive minimum over phases since $\gamma\ne0$, and the Riemann sums converge uniformly in $\phi$ by a uniform derivative bound. This example identifies the information the theta average loses even with exact knowledge of that average at every real scale.
