@@ -35,4 +35,6 @@ tar -xzf upstream.tar.gz
 cd mathlib4
 lake exe cache get
 lake env sh "$repo/finite/replay_corners.sh"
+lake env lean -DautoImplicit=false -R "$repo/pairs" -o "$scratch/PairSignChecks.olean" "$repo/pairs/PairSignChecks.lean"
+lake env sh -c 'export LEAN_PATH="$1${LEAN_PATH:+:$LEAN_PATH}"; exec leanchecker -v PairSignChecks' sh "$scratch"
 lake env python3 "$repo/verify.py" "$scratch/lean/src"
