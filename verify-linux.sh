@@ -8,6 +8,7 @@ fi
 repo=$(cd "$(dirname "$0")" && pwd)
 (cd "$repo" && sha256sum --check SHA256SUMS)
 python3 "$repo/check_weight.py"
+python3 "$repo/finite/check_quartic_exact.py"
 scratch=$(mktemp -d)
 trap 'rm -rf -- "$scratch"' EXIT
 cd "$scratch"
@@ -33,4 +34,5 @@ tar -xzf upstream.tar.gz
 
 cd mathlib4
 lake exe cache get
+lake env sh "$repo/finite/replay_corners.sh"
 lake env python3 "$repo/verify.py" "$scratch/lean/src"
