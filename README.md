@@ -2,7 +2,7 @@
 
 **Finite result.** The weighted ordinary-prime sum is strictly below its main term at every real scale through $10^{45}$. Platt and Trudgian’s published zero check through $3\cdot10^{12}$ suffices. This covers every square sample in every block $K\le n\le K^2$ for $1\le K\le177{,}827{,}941{,}003$. A sign failure at any larger scale $x$ forces a zero below height $17x^{1/4}$ with real part greater than $1/2+20/\log(x/2)$. The theorem for arbitrarily large blocks remains a separate target. [Proof and prior work](finite/QUARTIC.md) · [Verification](finite/CHECKS.txt)
 
-**Fix any positive integer $`k`$.** A one-sided test on the scales $`n^k`$ characterizes the Riemann hypothesis. The test can use squares, tenth powers or hundredth powers. The same exponent must be used throughout. The sample condition is an infinite assertion. The square test was established earlier by `bramble_trace`. [Earlier square-sampling proof](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=24)
+**Fix any positive integer $`k`$.** A one-sided test on the scales $`n^k`$ characterizes the Riemann hypothesis. The test can use squares, tenth powers or hundredth powers. The same exponent must be used throughout. The sample condition is an infinite assertion. The square test was established earlier by `bramble_trace`. The Omega Institute proved a fourth-power test for a cumulative sum over prime powers. [Earlier square-sampling proof](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=24), [Omega’s fourth-power theorem](https://github.com/the-omega-institute/trureturing/blob/4e51eeaa9736a08ad0e9b8b79579e4b7ba80837e/D5/S3/Weil/Mertens/IntegratedExplicit/QuarticSampling.lean#L131)
 
 Give $`m`$ in the interval $`(x/4,x)`$ the weight
 
