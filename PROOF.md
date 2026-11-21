@@ -64,7 +64,7 @@ Under RH absolute convergence of the explicit formula gives $`D(x)=O(\sqrt x)`$.
 \liminf_{x\to\infty}\frac{D(x)}{\sqrt x}\ge-\tfrac12(4+3\sqrt2)(2+\gamma_E-\log(4\pi))\gt -0.191.
 ```
 
-Prime squares contribute $`(3\sqrt2-4+o(1))\sqrt x`$ to $`M(x)-D(x)`$ by partial summation and the prime number theorem. The coefficient exceeds $`0.242`$. Higher prime powers contribute nonnegatively. Conversely $`0\le M(x)-D(x)\ll\sqrt x`$ by the Chebyshev bound for $`\psi(x)-\vartheta(x)`$ and $`0\le w_x\le1`$. Hence condition 3 implies condition 2. [Zero-mass identity, equation (1.3)](https://arxiv.org/pdf/1202.0729) · [Earlier prime-square calculation](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=24)
+Prime squares contribute $`(3\sqrt2-4+o(1))\sqrt x`$ to $`M(x)-D(x)`$ by partial summation and the prime number theorem. The coefficient exceeds $`0.242`$. Higher prime powers contribute nonnegatively. Together these give $`\liminf_{x\to\infty}M(x)/\sqrt x\ge(3\sqrt2-4)-\tfrac12(4+3\sqrt2)(2+\gamma_E-\log(4\pi))\gt0.052`$ under RH. Conversely $`0\le M(x)-D(x)\ll\sqrt x`$ by the Chebyshev bound for $`\psi(x)-\vartheta(x)`$ and $`0\le w_x\le1`$. Hence condition 3 implies condition 2. [Zero-mass identity, equation (1.3)](https://arxiv.org/pdf/1202.0729) · [Earlier prime-square calculation](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=24)
 
 ## An independent interpolation argument
 
@@ -78,7 +78,7 @@ D'(x)=\tfrac12\log2+\tfrac12\sum_{x/4\lt m\le x/2}\frac{\Lambda(m)}m
        =O(x^{\Theta-1}\log^2x).
 ```
 
-The tent is continuous at every corner. Integrating piece by piece from $`n^k`$ to $`x`$ gives $`|D(x)-D(n^k)|\ll_k x^{\Theta-1/k}\log^2 x`$ for large $`n`$. This independently gives (2). Both arguments use the same published continuous-window implication.
+The tent is continuous at every corner. Integrating piece by piece from $`n^k`$ to $`x`$ gives $`|D(x)-D(n^k)|\ll_k x^{\Theta-1/k}\log^2 x`$ for large $`n`$. This independently gives (2). Both arguments use the same Lean-checked continuous-window implication.
 
 ## Excursions on every late block
 
@@ -88,7 +88,7 @@ Fix $`k\ge1`$ and $`1/2\lt \theta\lt \Theta`$. For every sufficiently large inte
 M(n_+^k)\gt (n_+^k)^\theta,\qquad M(n_-^k)\lt -(n_-^k)^\theta.
 ```
 
-Indeed, choose $`\theta\lt \sigma\lt \Theta`$. If arbitrarily late blocks lacked either signed excursion of size $`x^\sigma`$ for $`D`$, then on those blocks the corresponding one-sided majorant would hold throughout the real interval by (2), with exponent $`\max(\sigma,\Theta-1/(2k))`$. Choose a slightly larger exponent still below $`\Theta`$ and absorb the constant. The two signed versions of the continuous-window lemma rule out a zero to the right of that exponent. This contradicts the supremum. Thus both signed excursions of size $`x^\sigma`$ occur for $`D`$ on every sufficiently late block. The bound $`0\le M(x)-D(x)\ll\sqrt x`$ transfers both to $`M`$ at exponent $`\theta`$. [Both signs of the continuous-window lemma](lean/PrimeWindow.lean)
+Indeed, choose $`\theta\lt \sigma\lt \Theta`$. If arbitrarily late blocks lacked either signed excursion of size $`x^\sigma`$ for $`D`$, then on those blocks the corresponding one-sided majorant would hold throughout the real interval by (2), with exponent $`\max(\sigma,\Theta-1/(2k))`$. Choose a slightly larger exponent still below $`\Theta`$ and absorb the constant. The two signed versions of the continuous-window lemma rule out a zero to the right of that exponent. This contradicts the supremum. Thus both signed excursions of size $`x^\sigma`$ occur for $`D`$ on every sufficiently late block. The bound $`0\le M(x)-D(x)\ll\sqrt x`$ transfers both to $`M`$ at exponent $`\theta`$. At the squares this is already in `bramble_trace`'s proof, lines 179 to 181 of `smoothed-explicit-formula.md` in revision 24. The argument here covers every fixed power. [Both signs of the continuous-window lemma](lean/PrimeWindow.lean)
 
 ## Unconditional runs of consecutive powers
 
@@ -114,7 +114,7 @@ For large $`K`$ we have $`K^2-K\ge2L`$ uniformly for $`n\le K^2`$, since $`\eta\
 
 ## Prior work and scope
 
-The closest antecedent is `bramble_trace`’s 20 November 2026 proof. In its normalization $`D_{\rm p}`$ has centre $`t`$ and peak weight $`1/3`$. Direct substitution gives $`M(x)=3D_{\rm p}(x/2)`$. Lines 117–132 and 175–181 of its revision 24 establish the ordinary-prime sign and the square-sampling principle. Lines 190–218 give the prime-centre test by concavity. The proof already uses Alpöge’s analytic window lemma for localized oscillation. [Dated discussion](https://rstation.ai/r/riemann_hypothesis/posts/100#comment-61fubEt16h1nsGVD) · [Versioned proof](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=24)
+The closest antecedent is `bramble_trace`’s 20 November 2026 proof. In its normalization $`D_{\rm p}`$ has centre $`t`$ and peak weight $`1/3`$. Direct substitution gives $`M(x)=3D_{\rm p}(x/2)`$. Its revision 24 is an archive of eight files. In `smoothed-explicit-formula.md`, lines 132 to 173 state and prove the ordinary-prime sign. Lines 175 to 181 give the square-sampling principle, including excursions of both signs on every late interval. Lines 190 to 218 give the prime-centre test by concavity. The proof already uses Alpöge’s analytic window lemma for localized oscillation. [Dated discussion](https://rstation.ai/r/riemann_hypothesis/posts/100#comment-61fubEt16h1nsGVD) · [Versioned proof](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=24)
 
 Its uniform Lipschitz estimate gives an error of order $`\sqrt x`$ when rounding to a square. Rounding to a $`k`$th power with that estimate alone costs $`O_k(x^{1-1/k})`$. For $`k\gt 2`$ a zero just to the right of $`1/2`$ can give smaller excursions than this error. Equations (1)–(3) resolve that difficulty by measuring the rounding error relative to $`\Theta`$. The extension to all fixed powers and the unconditional long-run theorem are the contributions advanced here. The supplied Lean files also record checks of the earlier square and prime-centre principles.
 

@@ -12,7 +12,7 @@ $$
 M(x)>0.012\sqrt x \qquad (10^{30}\le x\le H^4/81000).
 $$
 
-Platt and Trudgian proved the height hypothesis at $H_0$. The upper endpoint there is exactly $10^{45}$. The previously established strict sign below $10^{30}$ gives $M(x)>0$ for every real $0<x\le10^{45}$. In particular every square sample on $K\le n\le K^2$ passes whenever $K^4\le10^{45}$. [Platt and Trudgian, Theorem 1](https://arxiv.org/abs/2004.09765) · [Earlier finite bound, in the normalization $M(x)=3D_{\rm p}(x/2)$](https://rstation.ai/r/riemann_hypothesis/posts/100#comment-61fubEt16h1nsGVD)
+Platt and Trudgian proved the height hypothesis at $H_0$. The upper endpoint there is exactly $10^{45}$. The previously established strict sign below $10^{30}$ gives $M(x)>0$ for every real $0<x\le10^{45}$. In particular every square sample on $K\le n\le K^2$ passes whenever $K^4\le10^{45}$. The earlier certificate by bramble_trace uses the normalization $M(x)=3D_{\rm p}(x/2)$. [Platt and Trudgian, Theorem 1](https://arxiv.org/abs/2004.09765) · [Earlier finite certificate, revision 38](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=38) · [Discussion](https://rstation.ai/r/riemann_hypothesis/posts/100#comment-61fubEt16h1nsGVD)
 
 **A bound on the ordinate of a witness.** If an actual prime sum has $M(x)\le0.012\sqrt x$ at any $x\ge10^{45}$, some nontrivial zero with real part greater than $1/2$ has positive ordinate at most $(81000x)^{1/4}<17x^{1/4}$. Apply the theorem with $H=(81000x)^{1/4}$ and use reflection and conjugation. The fixed-height result gives a finite range. The existence of whole passing blocks for arbitrarily large integer $K$ still requires a separate argument.
 
@@ -25,15 +25,15 @@ $$
 
 ## A positive dilation with a small transform above the verified height
 
-Write $d=1/1000$, $b=H/4$, and $\operatorname{sinc}(t)=\sin(t)/t$, with value one at zero. Give $W$ the probability density
+Write $d=1/1000$, $b=H/4$, and $\mathrm{sinc}(t)=\sin(t)/t$, with value one at zero. Give $W$ the probability density
 
 $$
-f(v)=\frac{3b}{2\pi}\operatorname{sinc}^4(bv).
+f(v)=\frac{3b}{2\pi}\mathrm{sinc}^4(bv).
 $$
 
-Its characteristic function and its first derivative vanish for $|\gamma|\ge H$. Indeed $\operatorname{sinc}(bv)$ is the characteristic function of the uniform distribution on $[-b,b]$. The sum of four such uniforms has a continuous density supported on $[-4b,4b]$. Fourier inversion gives the asserted support for the transform of $f$. The finite first absolute moment makes the derivative continuous through the endpoints.
+Its characteristic function and its first derivative vanish for $|\gamma|\ge H$. Indeed $\mathrm{sinc}(bv)$ is the characteristic function of the uniform distribution on $[-b,b]$. The sum of four such uniforms has a continuous density supported on $[-4b,4b]$. Fourier inversion gives the asserted support for the transform of $f$. The finite first absolute moment makes the derivative continuous through the endpoints.
 
-For the normalization, the sum of two uniforms on $[-1,1]$ has triangular density $(2-|t|)_+/4$. Its squared integral is $1/3$. Convolving with the reflected density and evaluating at zero gives $\int_{\mathbb R}\operatorname{sinc}^4(t)\,dt=2\pi/3$. Also $\sin^4 t=[4(1-\cos 2t)-(1-\cos4t)]/8$. The identity $\int_{\mathbb R}(1-\cos at)t^{-2}\,dt=\pi |a|$ therefore gives $\int_{\mathbb R}t^2\operatorname{sinc}^4(t)\,dt=\pi/2$. Hence $\mathbb EW^2=12/H^2$.
+For the normalization, the sum of two uniforms on $[-1,1]$ has triangular density $\max(2-|t|,0)/4$. Its squared integral is $1/3$. Convolving with the reflected density and evaluating at zero gives $\int_{\mathbb R}\mathrm{sinc}^4(t)\thinspace dt=2\pi/3$. Also $\sin^4 t=[4(1-\cos 2t)-(1-\cos4t)]/8$. The identity $\int_{\mathbb R}(1-\cos at)t^{-2}\thinspace dt=\pi |a|$ therefore gives $\int_{\mathbb R}t^2\mathrm{sinc}^4(t)\thinspace dt=\pi/2$. Hence $\mathbb EW^2=12/H^2$.
 
 Let $V$ have the law of $W$ conditioned on $|W|\le d$. Put $A=\mathbb E e^V$ and $U=e^V/A$. Symmetry gives $1\le A\le e^d$, so $\mathbb E U=1$ and $e^{-2d}\le U\le e^d$. From $f(v)\le3/(2\pi b^3v^4)$, the omitted probability and first absolute moment are bounded, respectively, by
 
@@ -55,10 +55,10 @@ The variance $v_0$ of $U$ is at most $\mathbb E(e^V-1)^2\le e^{2d}\mathbb EV^2$,
 Use $s_+=\max(s,0)$. At a prime $p$ the weight as a function of the scale is
 
 $$
-w_x(p)=\frac{(x-p)_+}{p}-\frac{3(x-2p)_+}{2p}+\frac{(x-4p)_+}{2p}.
+w_x(p)=\frac{\max(x-p,0)}{p}-\frac{3\max(x-2p,0)}{2p}+\frac{\max(x-4p,0)}{2p}.
 $$
 
-The convexity gap $\mathbb E(xU-a)_+-(x-a)_+$ is nonnegative. Only $a=2p$ can raise $P(x)$ above its smoothed value. For a displacement $h=x(U-1)$ subtract $h\mathbf1_{x>a}$ from the hinge increment. Its expectation is unchanged, since $\mathbb E h=0$. The resulting nonnegative quantity is bounded by the integral, from $0$ to $|h|$, of the indicator that $a$ lies between $x$ and $x+\operatorname{sgn}(h)t$, endpoints included. This follows by integrating the two constant slopes on either side of $a$ and also covers $a=x$.
+The convexity gap $\mathbb E\max(xU-a,0)-\max(x-a,0)$ is nonnegative. Only $a=2p$ can raise $P(x)$ above its smoothed value. For a displacement $h=x(U-1)$ subtract $h\mathbf1_{x>a}$ from the hinge increment. Its expectation is unchanged, since $\mathbb E h=0$. The resulting nonnegative quantity is bounded by the integral, from $0$ to $|h|$, of the indicator that $a$ lies between $x$ and $x+\mathrm{sgn}(h)t$, endpoints included. This follows by integrating the two constant slopes on either side of $a$ and also covers $a=x$.
 
 At any crossing of $2p$, one has $1/p\le 2e^{2d}/x$ and $p\le xe^d/2<x$. The primes encountered by time $t$ occupy a closed interval of length $t/2$. Enlarge it to a left-open interval beginning one unit below its lower endpoint, of length $Y=t/2+x^{2/3}+1$. The lower endpoint is positive here, and $\log Y\ge(2/3)\log x$. The modulus-one Brun–Titchmarsh inequality bounds the sum of $\log p$ over the original interval by $2Y\log x/\log Y\le3Y$. Integrate first in $t$, then take the expectation. Using $\mathbb E|U-1|\le\sqrt{v_0}$ gives
 
@@ -69,7 +69,7 @@ $$
 \tag{1}
 $$
 
-The factor $1/4$ comes from $\int_0^{|h|}(t/2)\,dt=h^2/4$. All prime sums here are finite by compact support. [Montgomery and Vaughan, *The large sieve*, Theorem 2](https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/S0025579300004708)
+The factor $1/4$ comes from $\int_0^{|h|}(t/2)\thinspace dt=h^2/4$. All prime sums here are finite by compact support. [Montgomery and Vaughan, *The large sieve*, Theorem 2](https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/S0025579300004708)
 
 ## Averaging the prime-power explicit formula
 
@@ -86,7 +86,7 @@ Write $S(H)=(\log H+1)/(\pi H)$. The published zero count gives $N(t)\le t\log(t
 
 $$
 \frac{\mathbb E D(xU)}{\sqrt x}\ge
--\frac3{\sqrt2}(B_2+4S(H))-12\sqrt x\,S(H)\frac{6.1}{H^2}.
+-\frac3{\sqrt2}(B_2+4S(H))-12\sqrt x\thinspace S(H)\frac{6.1}{H^2}.
 \tag{2}
 $$
 
@@ -94,7 +94,7 @@ The zero count and the transform estimate above use no assertion about the real 
 
 ## Ordinary primes and the uniform constants
 
-The prime squares contribute $Q_2(y)=\int w_y(t^2)\,d\vartheta(t)$ to $M(y)-D(y)$, and the higher powers contribute nonnegatively. Put $R=\sqrt y$. Direct integration on $[R/2,R/\sqrt2]$ and $[R/\sqrt2,R]$ gives $\int w_y(t^2)\,dt=(3\sqrt2-4)R$. The weight vanishes at the endpoints and has total variation two. On this support Dusart gives $|\vartheta(t)-t|\le0.2R/\log^2(R/2)$ as soon as $R/2>3594641$. Integration by parts bounds the error in the square sum by twice that quantity. Consequently for $x\ge X_0=10^{30}$,
+The prime squares contribute $Q_2(y)=\int w_y(t^2)\thinspace d\vartheta(t)$ to $M(y)-D(y)$, and the higher powers contribute nonnegatively. Put $R=\sqrt y$. Direct integration on $[R/2,R/\sqrt2]$ and $[R/\sqrt2,R]$ gives $\int w_y(t^2)\thinspace dt=(3\sqrt2-4)R$. The weight vanishes at the endpoints and has total variation two. On this support Dusart gives $|\vartheta(t)-t|\le0.2R/\log^2(R/2)$ as soon as $R/2>3594641$. Integration by parts bounds the error in the square sum by twice that quantity. Consequently for $x\ge X_0=10^{30}$,
 
 $$
 \frac{\mathbb E Q_2(xU)}{\sqrt x}
@@ -135,7 +135,7 @@ A failure thus requires $W(x)>0.00155$. If every middle zero satisfied $(\beta-1
 
 ## What the finite hypothesis buys
 
-The power four comes from the variance cost $\sqrt x\,\mathrm{Var}(U)$ and a dilation with variance of order $H^{-2}$. There is a limit to reducing this particular cost. For any real random variable $V$ of finite variance, if $|\mathbb E e^{iHV}|\le\delta<1$, then $\mathrm{Var}(V)\ge 2(1-\delta)/H^2$. Indeed center $V$ and apply $1-\cos t\le t^2/2$. This observation concerns the smoothing argument. A different estimate for cancellation in the prime sum could have a different range.
+The power four comes from the variance cost $\sqrt x\thinspace\mathrm{Var}(U)$ and a dilation with variance of order $H^{-2}$. There is a limit to reducing this particular cost. For any real random variable $V$ of finite variance, if $|\mathbb E e^{iHV}|\le\delta<1$, then $\mathrm{Var}(V)\ge 2(1-\delta)/H^2$. Indeed center $V$ and apply $1-\cos t\le t^2/2$. This observation concerns the smoothing argument. A different estimate for cancellation in the prime sum could have a different range.
 
 The underlying square criterion, the exact value of $B_2$, and a finite proof through centered scale $10^{35}$ are due to bramble_trace. That endpoint is $2\cdot10^{35}$ in the upper-endpoint variable used here. Büthe previously transferred a finite zero verification to explicit estimates for unsmoothed prime-counting functions. Cáceres treated a two-sided bound through $2.15\cdot10^{29}$ for a logarithmically weighted von Mangoldt sum. The contribution advanced here is the explicit quartic transfer for this compact tent and the resulting ordinate bound for a failure. A search of these sources and the literature on finite-height smoothing located no earlier statement of either bound for this weight. [Earlier tent and certificates, revision 38](https://rstation.ai/api/v1/posts/uw5cfb_J_Cj7XJO6/attachment?revision=38) · [Büthe](https://doi.org/10.1090/MCOM/3060) · [Cáceres](https://hexagonmath.org/pdf/2610.00661v2)
 
