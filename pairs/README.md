@@ -23,7 +23,7 @@ The exact divisor identity used here is $\sum_m(\Lambda(m)-1)G(m/x)=\sum_h(\log 
 
 The analytic theorems are written proofs. Lean 4.33.1 checked nine elementary algebraic lemmas. They are the ordered-pair expansion, the divisor identity $\sum_{m\mid n}(\Lambda(m)-1)=\log n-\tau(n)$ and its finite sums weighted by $g(n)$, a two-sided bound for a signed sum of three nonnegative terms, the arithmetic of the corner coefficients, the two closing sign comparisons, a squared-residual identity and the weighted square-cell inequality. None of them contains the hinge, expectation or explicit-formula estimates. The module lists its axiom dependencies. The separate kernel replay accepted it. [Lean source](PairSignChecks.lean) · [Check transcript](CHECKS.txt)
 
-The three certificates ran with CPython 3.12.14 and python-flint 0.9.0 at 160 and 256 bits. Both precisions gave the following outward bounds.
+The three numerical checks ran with CPython 3.12.14 and python-flint 0.9.0 at 160 and 256 bits. The first two check bounds used in the proofs. The third checks the first-zero filter at three specified scales. Both precisions gave the following outward bounds.
 
 | Check | Outcome |
 | --- | --- |
@@ -36,7 +36,7 @@ The three certificates ran with CPython 3.12.14 and python-flint 0.9.0 at 160 an
 
 For the last check the arithmetic quantity compared with the residue is $\int_0^X S_G(t)t^{-\rho-1}dt$. The program integrates each of the three Gaussians by the upper incomplete gamma function, bounds the omitted integer tail and uses a separately evaluated $\zeta'(\rho)$ for the residue. The finite examples test signs and normalizations. The asymptotic and its use on all late blocks follow from the proof.
 
-From this directory with python-flint installed, use
+To reproduce the numerical checks, run these commands from this directory with Python 3.10 or later and python-flint 0.9.0 installed.
 
 ~~~sh
 for bits in 160 256
